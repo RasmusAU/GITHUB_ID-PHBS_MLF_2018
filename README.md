@@ -11,7 +11,7 @@
 * The goal of this project is to predict XX using various methods of machine learning based on the book "Python Machine Learning" by Sebastian Raschka.
 
 ## Data:
-See [Data](data.md) for further explanation.
+See [Data](data) for further explanation.
 
 ## Methods:
 
