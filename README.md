@@ -1,7 +1,7 @@
 ## GITHUB_ID-PHBS_MLF_2018
 
 ## Team members:
-### Rasmus Behnk, 221802010222, RasmusAU
+### Rasmus Behnk, 1802010222, RasmusAU
 
 ## Brief description of data:
 ### Data is pulled from XX
