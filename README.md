@@ -1,11 +1,11 @@
-# GITHUB_ID-PHBS_MLF_2018
+## GITHUB_ID-PHBS_MLF_2018
 
-# Team members:
-## Rasmus Behnk, 221802010222, RasmusAU
+## Team members:
+### Rasmus Behnk, 221802010222, RasmusAU
 
-# brief description of data 
-## Data is pulled from XX
-## Data is XX 
+## Brief description of data:
+### Data is pulled from XX
+### Data is XX 
 
-# Goal of the project
-## The goal of this project is to predict XX using various methods of machine learning based on the book "Python Machine Learning" by Sebastian Raschka
+## Goal of the project:
+### The goal of this project is to predict XX using various methods of machine learning based on the book "Python Machine Learning" by Sebastian Raschka
