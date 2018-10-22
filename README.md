@@ -1,6 +1,6 @@
 # GITHUB_ID-PHBS_MLF_2018
 
-## Team members:
+## Author:
 * Rasmus Behnk, 1802010222, RasmusAU
 
 ## Brief description of data:
@@ -9,9 +9,6 @@
 
 ## Goal of the project:
 * The goal of this project is to predict what makes a good movie, defined as ranking highly on the IMDb score, using various methods of machine learning, e.g. logistic regression, KNN, SVM, random forest, bagging and AdaBoosting, based on the book "Python Machine Learning" by Sebastian Raschka.
-
-## Data:
-See [data](data) for further explanation.
 
 ## References:
 * "Python Machine Learning" by Sebastian Raschka.
