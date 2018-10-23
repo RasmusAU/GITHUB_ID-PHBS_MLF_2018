@@ -3,7 +3,7 @@
 ## Author:
 |Github account |Student ID |Name |
 |:----- |:----- |:----- |
-|[Rasmus Behnk](https://github.com/RasmusAU) |1802010222 |RasmusAU |
+|[Rasmus Behnk](https://github.com/RasmusAU) |1802010222 |Rasmus Behnk |
 
 ## Goal of the project:
 * The goal of this project is to identify the features needed to predict what makes a good movie, defined as ranking highly on the IMDb score, using various methods of machine learning, e.g. logistic regression, KNN, SVM, random forest, bagging and AdaBoosting, based on the book "Python Machine Learning" by Sebastian Raschka. Which features are most important to a good IMDb score?
