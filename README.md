@@ -13,7 +13,7 @@
 * Data is pulled from www.kaggle.com - https://www.kaggle.com/kevalm/movie-imdb that is originally scraped from IMDb's homepage from 20/02-2018.
 * Data will be checked by scraping IMDb's homepage myself.
 
-![image](https://github.com/RasmusAU/RasmusAU-PHBS_MLF_2018/tree/master/data/Dataset.png)
+![image](https://github.com/RasmusAU/RasmusAU-PHBS_MLF_2018/blob/master/data/Dataset.png)
 
 ## References:
 * "Python Machine Learning" by Sebastian Raschka.
