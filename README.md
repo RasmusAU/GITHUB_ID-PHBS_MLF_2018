@@ -16,6 +16,7 @@
 * Data will be checked by scraping IMDb's homepage myself.
 
 ![image](https://github.com/RasmusAU/RasmusAU-PHBS_MLF_2018/blob/master/data/Dataset.png width="100")
+<img src="https://github.com/RasmusAU/RasmusAU-PHBS_MLF_2018/blob/master/data/Dataset.png" width="200">
 
 ## References:
 * "Python Machine Learning" by Sebastian Raschka.
