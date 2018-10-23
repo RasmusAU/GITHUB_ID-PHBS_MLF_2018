@@ -9,8 +9,7 @@
 * Knowing many of the features before making a movie, e.g. movie director, duration, genre, actors, budget etc., can be used to predict the IMDb score and its gross earnings.
 * The goal of this project is to identify the features needed to predict what makes a good movie, defined as ranking highly on the IMDb score, using various methods of machine learning, e.g. logistic regression, KNN, SVM, random forest, bagging and AdaBoosting, based on the book "Python Machine Learning" by Sebastian Raschka. 
 * Furthermore the project can show whether the gross earnings will exceed the budget of a movie, hence identifying whether the movie will be profitable or not, and hence if it should be realized or not.
-* Which features are most important to a good IMDb score?
-* From the best scoring algorithm one can identify the parameters to make a good scoring movie.
+* From the best scoring algorithm one can identify the features to make a good scoring movie.
 
 ## Brief description of data:
 * Consists of 5043 movies and 28 features (5043x28 matrix).
