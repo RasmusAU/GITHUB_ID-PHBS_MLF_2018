@@ -1,7 +1,7 @@
 # RasmusAU-PHBS_MLF_2018
 
 ## Author:
-|Github account |Student ID |Name|
+|Github account |Student ID |Name |
 | ----- | ----- | ----- |
 |[Rasmus Behnk](https://github.com/RasmusAU) |1802010222 |RasmusAU |
 
