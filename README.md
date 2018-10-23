@@ -1,4 +1,4 @@
-# GITHUB_ID-PHBS_MLF_2018
+# RasmusAU-PHBS_MLF_2018
 
 ## Author:
 * Rasmus Behnk, 1802010222, RasmusAU
