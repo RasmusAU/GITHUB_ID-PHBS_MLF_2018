@@ -10,7 +10,7 @@
 ## Brief description of data:
 * Consists of 5043 movies and 28 features (5043x28 matrix).
 * Data is on IMDb movie ratings contraining features on e.g. director, duration, gross earnings, genres, actors, language, budget, IMDb score etc. (see [data](data) for full list of features).
-* Data is pulled from www.kaggle.com - https://www.kaggle.com/kevalm/movie-imdb that is originally scraped from IMDb's homepage.
+* Data is pulled from www.kaggle.com - https://www.kaggle.com/kevalm/movie-imdb that is originally scraped from IMDb's homepage from 20/02-2018.
 
 ## References:
 * "Python Machine Learning" by Sebastian Raschka.
