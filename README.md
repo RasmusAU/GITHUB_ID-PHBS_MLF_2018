@@ -4,7 +4,7 @@
 * Rasmus Behnk, 1802010222, RasmusAU
 
 ## Brief description of data:
-* Consists of 5024 movies and 28 features (5024x28 matrix).
+* Consists of 5043 movies and 28 features (5043x28 matrix).
 * Data is on IMDb movie ratings contraining features on e.g. director, duration, gross earnings, genres, actors, language, budget, IMDb score etc. (see [data](data) for full list of features).
 * Data is pulled from www.kaggle.com - https://www.kaggle.com/kevalm/movie-imdb
 
