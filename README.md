@@ -2,7 +2,7 @@
 
 ## Author:
 |Github account |Student ID |Name |
-|----- |----- |----- |
+|:----- |:----- |:----- |
 |[Rasmus Behnk](https://github.com/RasmusAU) |1802010222 |RasmusAU |
 
 ## Goal of the project:
