@@ -33,7 +33,7 @@ The mean of all included movies' IMDb's ratings in the period 2000-2018 is appro
 <img src="https://github.com/RasmusAU/RasmusAU-PHBS_MLF_2018/blob/master/data/distribution_imdb_score_done.png" width="400">
 
 The following is a correlation map showing the correlation between the different features:
-<img src="https://github.com/RasmusAU/RasmusAU-PHBS_MLF_2018/blob/master/data/correlation_map.png" width="400">
+<img src="https://github.com/RasmusAU/RasmusAU-PHBS_MLF_2018/blob/master/data/correlation_map.png" width="700">
 
 ## References:
 * "Python Machine Learning" by Sebastian Raschka.
