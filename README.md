@@ -72,7 +72,7 @@ Data is standardized using SKLearn.
 
 ## Feature selection
 <img src="https://github.com/RasmusAU/RasmusAU-PHBS_MLF_2018/blob/master/data/Feature_importance_RF.png" width="400">
-Number of features that meet the threshold criterion >= 0.07
+Number of features that meet the threshold criterion >= 0.07:
 
 |Feature |Importance |
 |:----- |:----- |
