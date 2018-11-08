@@ -72,15 +72,18 @@ Data is standardized using SKLearn.
 
 ## Feature selection
 <img src="https://github.com/RasmusAU/RasmusAU-PHBS_MLF_2018/blob/master/data/Feature_importance_RF.png" width="400">
-Number of features that meet this threshold criterion: 8
-* actor_2_name                   0.135532
-* director_name                  0.099928
-* num_critic_for_reviews         0.094924
-* genres                         0.093145
-* actor_1_name                   0.087181
-* duration                       0.071415
-* director_facebook_likes        0.071251
-* actor_1_facebook_likes         0.070462
+Number of features that meet the threshold criterion >= 0.07
+
+|Feature |Importance |
+|:----- |:----- |
+|actor_2_name |0.1355 |
+|director_name |0.0999 |
+|num_critic_for_reviews |0.0949 |
+|genres |0.0931 |
+|actor_1_name |0.0871 |
+|duration |0.0714 |
+|director_facebook_likes |0.0712 |
+|actor_1_facebook_likes |0.0704 |
 
 ## Learning curves to assess bias/variance problems 
 To improve performance, I look at learning and validation curves:
