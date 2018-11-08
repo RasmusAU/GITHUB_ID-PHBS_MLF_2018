@@ -12,7 +12,6 @@
 * From the best scoring algorithm one can identify the features to make a good scoring movie.
 
 ## Brief description of data
-* Original data consists of 5043 movies and 28 features (5043x28 matrix).
 |Attribute |Description |
 |:----- |:----- |
 |'color' |Whether the movie is in black/white or color |
@@ -35,7 +34,7 @@
 |'movie_imdb_link' |Link to movie |
 |'num_user_for_reviews' |Number of users for review |
 |'language' |Language |
-|'country' |Country |
+|'country' |Country of origin |
 |'content_rating' |Movie's content rating |
 |'budget' |Budget |
 |'title_year' |Year of release |
@@ -43,6 +42,8 @@
 |'imdb_score' |IMDb score |
 |'movie_facebook_likes' |Likes of movie's Facebook page |
 
+
+* Original data consists of 5043 movies and 28 features (5043x28 matrix).
 * Data is on IMDb movie ratings contraining features on e.g. director, duration,, genres, actors, language, budget, IMDb score etc. (see [data](data) for full list of features).
 * Data is pulled from www.kaggle.com - https://www.kaggle.com/kevalm/movie-imdb that is originally scraped from IMDb's homepage from 20/02-2018.
 
