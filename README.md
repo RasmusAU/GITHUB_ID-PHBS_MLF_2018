@@ -81,20 +81,20 @@ Number of features that meet this threshold criterion: 8
  6) duration                       0.071415
  7) director_facebook_likes        0.071251
  8) actor_1_facebook_likes         0.070462
- 
-## L1 regularization
-<img src="https://github.com/RasmusAU/RasmusAU-PHBS_MLF_2018/blob/master/data/Weights_L1.png" width="400">
-Training accuracy: 0.5057
-Test accuracy: 0.5226
 
 ## Total and explained variance
 <img src="https://github.com/RasmusAU/RasmusAU-PHBS_MLF_2018/blob/master/data/Explained_variance_PCA.png" width="400">
 
 ## Learning curves to assess bias/variance problems 
+To improve performance, I look at learning and validation curves:
 <img src="https://github.com/RasmusAU/RasmusAU-PHBS_MLF_2018/blob/master/data/Learning_curves.png" width="400">
+Based on the learning curves above it is clear that the variance is low, given me no indication of overfitting the data. Hence the model is not too complex for the dataset.
+However the bias it relatively high, indicating underfitting, i.e. my model suffers from low performance for unseen data, since the model is not complex enough to capture the patterns in the training data.
+In order to adress the problem of the high degree of bias, and hence find a nice bias-variance tradeoff I will try to tune the complexity of the model using regularization. 
 
 ## Validation curves to assess over- and underfitting
 <img src="https://github.com/RasmusAU/RasmusAU-PHBS_MLF_2018/blob/master/data/Validation_curves.png" width="400">
+Validation curves vary the model parameters values instead of plotting training and test accuracies as functions. Also here I get a high bias.
 
 ## Models
 ### Logistic regression
@@ -102,25 +102,28 @@ The first model is the simple Logistic regression. It generates a  multi-class m
 Logistic regression = 0.4639
 
 ### Support Vector Machine using grid search
-Optimization of the hyper-parameter  C  was  done using  grid  search. Grid  search is  exhaustive search through a manually specified subset of the hyper-parameter space.
+Optimization of the hyper-parameter  C  was  done using  grid  search. Grid  search is  exhaustive search through a manually specified subset of the hyper-parameter space. 
 SVM = 0.5122
+I see that using the exhaustive grid search, a popular hyperparameter optimization technique, improves the model's performance.
 
 ### K-nearest neighbor
+Using majority voting, the KNN model finds the nearest specified k samples in the training dataset and use majority voting of these samples to classify the new data point.
 KNN = 0.4002 (K=100)
 
 ### Random forest
+I use decision trees for classification. Entropy is a measure of impurity to determine which feature split maximizes the
+Information Gain (IG).
 Entropy accuracy = 0.4480
+
+The Gini impurity is a criterion that minimizes the probability of misclassification:
 Gini accuracy = 0.4308
 
-## ROC
-<img src="https://github.com/RasmusAU/RasmusAU-PHBS_MLF_2018/blob/master/data/ROC.png" width="400">
-Better to do random guessing.
-
 ## Conclusion
-The most significant features were found to be the 
-The best model to represent the movie features are the XXX.
+The most significant features were found to be the actors names, the name of the director, genre and the number of vritics for review.
+The best model to represent the movie features is the Support Vector Machine using grid search.
 Not possible to estimate the IMDb ratings well based on the data available on IMDb. This may be caused by multiple factors e.g.:
 * Dataset from Kaggle is insufficient and/or not correct.
+* Not complex enough features, as indicated by the learning curve, I have high bias.
 
 Further research could include a sentiment analysis of the comments from IMDb, news and social medias impact (coverage of movie premiere).
 
