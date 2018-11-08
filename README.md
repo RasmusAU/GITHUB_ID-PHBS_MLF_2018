@@ -28,7 +28,7 @@
 
 ## Data after processing
 The mean of the 3597 included movies' IMDb's ratings in the period 2000-2018 is approximately 6.31 and with a standard deviation of approximately 1.11. The distribution looks as the following:
-<img src="https://github.com/RasmusAU/RasmusAU-PHBS_MLF_2018/blob/master/data/distribution.png" width="400">
+<img src="https://github.com/RasmusAU/RasmusAU-PHBS_MLF_2018/blob/master/data/distribution_imdb_score_done.png" width="400">
 
 The following is a correlation map showing the correlation between the different features:
 <img src="https://github.com/RasmusAU/RasmusAU-PHBS_MLF_2018/blob/master/data/correlation_map.png" width="700">
