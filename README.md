@@ -13,6 +13,8 @@
 
 ## Brief description of data
 * Original data consists of 5043 movies and 28 features (5043x28 matrix).
+|Attribute |Description |
+|:----- |:----- |:----- |
 |'color' |Whether the movie is in black/white or color |
 |'director_name' |Name of director |
 |'num_critic_for_reviews' |Number of critics for review |
