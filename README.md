@@ -110,7 +110,7 @@ I see that using the exhaustive grid search, a popular hyperparameter optimizati
 ### K-nearest neighbor
 Using majority voting, the KNN model finds the nearest specified k samples in the training dataset and use majority voting of these samples to classify the new data point.
 
-KNN = 0.4002 (K=100)
+KNN = 0.4002 (K=20)
 
 ### Random forest
 I use decision trees for classification. Entropy is a measure of impurity to determine which feature split maximizes the
