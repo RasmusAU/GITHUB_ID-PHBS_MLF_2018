@@ -16,7 +16,7 @@
 * Data is on IMDb movie ratings contraining features on e.g. director, duration,, genres, actors, language, budget, IMDb score etc. (see [data](data) for full list of features).
 * Data is pulled from www.kaggle.com - https://www.kaggle.com/kevalm/movie-imdb that is originally scraped from IMDb's homepage from 20/02-2018.
 
-<img src="https://github.com/RasmusAU/RasmusAU-PHBS_MLF_2018/blob/master/data/Description" width="400">
+<img src="https://github.com/RasmusAU/RasmusAU-PHBS_MLF_2018/blob/master/data/Description.png" width="400">
 
 ## Data processing
 * Drop the meaningless columns
