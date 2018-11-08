@@ -97,23 +97,29 @@ Validation curves vary the model parameters values instead of plotting training 
 ## Models
 ### Logistic regression
 The first model is the simple Logistic regression. It generates a  multi-class model with linear weights, most directly comparable  to  the  feature  weights  given  by linear regression.
+
 Logistic regression = 0.4639
 
 ### Support Vector Machine using grid search
 Optimization of the hyper-parameter  C  was  done using  grid  search. Grid  search is  exhaustive search through a manually specified subset of the hyper-parameter space. 
+
 SVM = 0.5122
+
 I see that using the exhaustive grid search, a popular hyperparameter optimization technique, improves the model's performance.
 
 ### K-nearest neighbor
 Using majority voting, the KNN model finds the nearest specified k samples in the training dataset and use majority voting of these samples to classify the new data point.
+
 KNN = 0.4002 (K=100)
 
 ### Random forest
 I use decision trees for classification. Entropy is a measure of impurity to determine which feature split maximizes the
 Information Gain (IG).
+
 Entropy accuracy = 0.4480
 
 The Gini impurity is a criterion that minimizes the probability of misclassification:
+
 Gini accuracy = 0.4308
 
 ## Conclusion
