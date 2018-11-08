@@ -13,6 +13,34 @@
 
 ## Brief description of data
 * Original data consists of 5043 movies and 28 features (5043x28 matrix).
+|'color' |Whether the movie is in black/white or color |
+|'director_name' |Name of director |
+|'num_critic_for_reviews' |Number of critics for review |
+|'duration' |Duration |
+|'director_facebook_likes' |Likes of director's Facebook page |
+|'actor_3_facebook_likes' |Likes of actor no. 3's Facebook page |
+|'actor_2_name' |Name of actor no. 2 |
+|'actor_1_facebook_likes' |Likes of actor no. 1's Facebook page |
+|'gross' |Movie's gross earnings |
+|'genres' |Movie's genre(s) |
+|'actor_1_name' |Name of actor no. 1 |
+|'movie_title' |Movie's title |
+|'num_voted_users' |Number of voted users |
+|'cast_total_facebook_likes' |Total cast's likes on Facebook |
+|'actor_3_name' |Name of actor no. 3 |
+|'facenumber_in_poster' |Faces of actor's in poster |
+|'plot_keywords' |Keywords |
+|'movie_imdb_link' |Link to movie |
+|'num_user_for_reviews' |Number of users for review |
+|'language' |Language |
+|'country' |Country |
+|'content_rating' |Movie's content rating |
+|'budget' |Budget |
+|'title_year' |Year of release |
+|'actor_2_facebook_likes' |Likes of actor no. 2's Facebook page |
+|'imdb_score' |IMDb score |
+|'movie_facebook_likes' |Likes of movie's Facebook page |
+
 * Data is on IMDb movie ratings contraining features on e.g. director, duration,, genres, actors, language, budget, IMDb score etc. (see [data](data) for full list of features).
 * Data is pulled from www.kaggle.com - https://www.kaggle.com/kevalm/movie-imdb that is originally scraped from IMDb's homepage from 20/02-2018.
 
@@ -20,11 +48,11 @@
 
 ## Data processing
 * Drop the meaningless columns
-** Dropping non-numeric columns that are not useful.
+ * Dropping non-numeric columns that are not useful. E.g. director name, actors names.
 * Deal with the NAN in data
   * I use mean imputation to estimate the missing values for the features where it makes sense. Mean imputation is a common interpolation technique, where I replace the missing values (NAN) with the mean value of the entire feature column. This is done to minimize the loss of information, and an alternative instead of dropping observations.
   * E.g. If the year of the movie's release is missing, then I drop the observation, since it does not makes sense to estimate this year based on other movies.
-* I examine the IMDb scores of movies in the period 2002-2018, hence movies from earlier than 2000 have been dropped. This is done to account for changes in movie budgets, the entrence of the internet, and improvement of technology.
+* I examine the IMDb scores of movies in the period 2000-2018, hence movies from earlier than 2000 have been dropped. This is done to account for changes in movie budgets, the entrence of the internet, and improvement of technology.
 
 ## Data after processing
 The mean of the 2041 included movies' IMDb's ratings in the period 2000-2018 is approximately 6.30 and with a standard deviation of approximately 0.99. The distribution looks as the following:
@@ -67,13 +95,15 @@ Test accuracy: 0.5226
 
 ## Models
 ### Logistic regression
-0.4639
+The first model is the simple Logistic regression. It generates a  multi-class model with linear weights, most directly comparable  to  the  feature  weights  given  by linear regression.
+Logistic regression = 0.4639
 
 ### Support Vector Machine using grid search
-0.5122
+Optimization of the hyper-parameter  C  was  done using  grid  search. Grid  search is  exhaustive search through a manually specified subset of the hyper-parameter space.
+SVM = 0.5122
 
 ### K-nearest neighbor
-0.4002
+KNN = 0.4002 (K=100)
 
 ### Random forest
 Entropy accuracy = 0.4480
@@ -84,8 +114,12 @@ Gini accuracy = 0.4308
 Better to do random guessing.
 
 ## Conclusion
-Not possible to estimate the IMDb ratings based on the data available on IMDb. This may be caused by multiple factors e.g.:
-* Dataset from Kaggle is not fully correct. 
+The most significant features were found to be the 
+The best model to represent the movie features are the XXX.
+Not possible to estimate the IMDb ratings well based on the data available on IMDb. This may be caused by multiple factors e.g.:
+* Dataset from Kaggle is insufficient and/or not correct.
+
+Further research could include a sentiment analysis of the comments from IMDb, news and social medias impact (coverage of movie premiere).
 
 ## References:
 * "Python Machine Learning" by Sebastian Raschka.
