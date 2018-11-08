@@ -27,7 +27,7 @@
 * I examine the IMDb scores of movies in the period 2002-2018, hence movies from earlier than 2000 have been dropped. This is done to account for changes in movie budgets, the entrence of the internet, and improvement of technology.
 
 ## Data after processing
-The mean of the 3597 included movies' IMDb's ratings in the period 2000-2018 is approximately 6.31 and with a standard deviation of approximately 1.11. The distribution looks as the following:
+The mean of the 2041 included movies' IMDb's ratings in the period 2000-2018 is approximately 6.30 and with a standard deviation of approximately 0.99. The distribution looks as the following:
 <img src="https://github.com/RasmusAU/RasmusAU-PHBS_MLF_2018/blob/master/data/distribution_imdb_score_done.png" width="400">
 
 The following is a correlation map showing the correlation between the different features:
@@ -53,8 +53,8 @@ Number of features that meet this threshold criterion: 8
  
 ## L1 regularization
 <img src="https://github.com/RasmusAU/RasmusAU-PHBS_MLF_2018/blob/master/data/Weights_L1.png" width="400">
-Training accuracy: 0.505718954248366
-Test accuracy: 0.5226438188494492
+Training accuracy: 0.5057
+Test accuracy: 0.5226
 
 ## Total and explained variance
 <img src="https://github.com/RasmusAU/RasmusAU-PHBS_MLF_2018/blob/master/data/Explained_variance_PCA.png" width="400">
