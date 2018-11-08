@@ -29,11 +29,43 @@
 * I examine the IMDb scores of movies in the period 2002-2018, hence movies from earlier than 2000 have been dropped. This is done to account for changes in movie budgets, the entrence of the internet, and improvement of technology.
 
 ## Data after processing
-The mean of all included movies' IMDb's ratings in the period 2000-2018 is approximately 6.31 and with a standard deviation of approximately 1.11. The distribution looks as the following:
+The mean of the 3597 included movies' IMDb's ratings in the period 2000-2018 is approximately 6.31 and with a standard deviation of approximately 1.11. The distribution looks as the following:
 <img src="https://github.com/RasmusAU/RasmusAU-PHBS_MLF_2018/blob/master/data/distribution_imdb_score_done.png" width="400">
 
 The following is a correlation map showing the correlation between the different features:
 <img src="https://github.com/RasmusAU/RasmusAU-PHBS_MLF_2018/blob/master/data/correlation_map.png" width="700">
+
+## Partitioning the dataset into training and test dataset
+Using SKLearn and test_size=0.4 the dataset is slit into a training dataset and a test dataset.
+
+## Standardization of data
+Data is standardized using SKLearn
+
+## Feature selection
+<img src="https://github.com/RasmusAU/RasmusAU-PHBS_MLF_2018/blob/master/data/Feature_importance_RF.png" width="400">
+Number of features that meet this threshold criterion: 8
+ 1) actor_2_name                   0.135532
+ 2) director_name                  0.099928
+ 3) num_critic_for_reviews         0.094924
+ 4) genres                         0.093145
+ 5) actor_1_name                   0.087181
+ 6) duration                       0.071415
+ 7) director_facebook_likes        0.071251
+ 8) actor_1_facebook_likes         0.070462
+ 
+## L1 regularization
+<img src="https://github.com/RasmusAU/RasmusAU-PHBS_MLF_2018/blob/master/data/Weights_L1.png" width="400">
+Training accuracy: 0.505718954248366
+Test accuracy: 0.5226438188494492
+
+## Total and explained variance
+<img src="https://github.com/RasmusAU/RasmusAU-PHBS_MLF_2018/blob/master/data/Explained_variance_PCA.png" width="400">
+
+## Learning curves to assess bias/variance problems 
+<img src="https://github.com/RasmusAU/RasmusAU-PHBS_MLF_2018/blob/master/data/Learning_curves.png" width="400">
+
+## Validation curves to assess over- and underfitting
+<img src="https://github.com/RasmusAU/RasmusAU-PHBS_MLF_2018/blob/master/data/Validation_curves.png" width="400">
 
 ## References:
 * "Python Machine Learning" by Sebastian Raschka.
