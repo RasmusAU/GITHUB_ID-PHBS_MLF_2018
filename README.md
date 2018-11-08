@@ -73,20 +73,18 @@ Data is standardized using SKLearn.
 ## Feature selection
 <img src="https://github.com/RasmusAU/RasmusAU-PHBS_MLF_2018/blob/master/data/Feature_importance_RF.png" width="400">
 Number of features that meet this threshold criterion: 8
- 1) actor_2_name                   0.135532
- 2) director_name                  0.099928
- 3) num_critic_for_reviews         0.094924
- 4) genres                         0.093145
- 5) actor_1_name                   0.087181
- 6) duration                       0.071415
- 7) director_facebook_likes        0.071251
- 8) actor_1_facebook_likes         0.070462
-
-## Total and explained variance
-<img src="https://github.com/RasmusAU/RasmusAU-PHBS_MLF_2018/blob/master/data/Explained_variance_PCA.png" width="400">
+* actor_2_name                   0.135532
+* director_name                  0.099928
+* num_critic_for_reviews         0.094924
+* genres                         0.093145
+* actor_1_name                   0.087181
+* duration                       0.071415
+* director_facebook_likes        0.071251
+* actor_1_facebook_likes         0.070462
 
 ## Learning curves to assess bias/variance problems 
 To improve performance, I look at learning and validation curves:
+
 <img src="https://github.com/RasmusAU/RasmusAU-PHBS_MLF_2018/blob/master/data/Learning_curves.png" width="400">
 Based on the learning curves above it is clear that the variance is low, given me no indication of overfitting the data. Hence the model is not too complex for the dataset.
 However the bias it relatively high, indicating underfitting, i.e. my model suffers from low performance for unseen data, since the model is not complex enough to capture the patterns in the training data.
