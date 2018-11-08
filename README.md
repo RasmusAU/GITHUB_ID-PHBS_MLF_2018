@@ -30,7 +30,7 @@
 
 ## Data after processing
 The mean of the 3597 included movies' IMDb's ratings in the period 2000-2018 is approximately 6.31 and with a standard deviation of approximately 1.11. The distribution looks as the following:
-<img src="https://github.com/RasmusAU/RasmusAU-PHBS_MLF_2018/blob/master/data/distribution_imdb_score_done.png" width="400">
+<img src="https://github.com/RasmusAU/RasmusAU-PHBS_MLF_2018/blob/master/data/Discription.png" width="400">
 
 The following is a correlation map showing the correlation between the different features:
 <img src="https://github.com/RasmusAU/RasmusAU-PHBS_MLF_2018/blob/master/data/correlation_map.png" width="700">
@@ -39,7 +39,7 @@ The following is a correlation map showing the correlation between the different
 Using SKLearn and test_size=0.4 the dataset is slit into a training dataset and a test dataset.
 
 ## Standardization of data
-Data is standardized using SKLearn
+Data is standardized using SKLearn.
 
 ## Feature selection
 <img src="https://github.com/RasmusAU/RasmusAU-PHBS_MLF_2018/blob/master/data/Feature_importance_RF.png" width="400">
@@ -66,6 +66,24 @@ Test accuracy: 0.5226438188494492
 
 ## Validation curves to assess over- and underfitting
 <img src="https://github.com/RasmusAU/RasmusAU-PHBS_MLF_2018/blob/master/data/Validation_curves.png" width="400">
+
+## Models
+### Logistic regression
+0.4639
+
+### Support Vector Machine using grid search
+0.5122
+
+### K-nearest neighbor
+0.4002
+
+### Random forest
+Entropy accuracy = 0.4480
+Gini accuracy = 0.4308
+
+## Conclusion
+Not possible to estimate the IMDb ratings based on the data available on IMDb. This may be caused by multiple factors e.g.:
+* Dataset from Kaggle is not fully correct. 
 
 ## References:
 * "Python Machine Learning" by Sebastian Raschka.
