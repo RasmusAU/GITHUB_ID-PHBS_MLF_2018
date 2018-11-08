@@ -79,6 +79,10 @@ Test accuracy: 0.5226
 Entropy accuracy = 0.4480
 Gini accuracy = 0.4308
 
+## ROC
+<img src="https://github.com/RasmusAU/RasmusAU-PHBS_MLF_2018/blob/master/data/ROC.png" width="400">
+Better to do random guessing.
+
 ## Conclusion
 Not possible to estimate the IMDb ratings based on the data available on IMDb. This may be caused by multiple factors e.g.:
 * Dataset from Kaggle is not fully correct. 
