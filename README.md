@@ -85,23 +85,6 @@ Number of features that meet the threshold criterion >= 0.07:
 |director_facebook_likes |0.0712 |
 |actor_1_facebook_likes |0.0704 |
 
-## K-fold cross-validation
-K-fold cross-validation is used to randomly split the training dataset into k folds without replacement. The folds k — 1  are used for training the model, and last fold is used to evaluate performance. This is done k times to obtain k models and performance estimates:
-
-CV accuracy: 0.444 +/- 0.022
-
-## Learning curves to assess bias/variance problems 
-To improve performance, I look at learning and validation curves:
-
-<img src="https://github.com/RasmusAU/RasmusAU-PHBS_MLF_2018/blob/master/data/Learning_curves.png" width="400">
-Based on the learning curves above it is clear that the variance is low, given me no indication of overfitting the data. Hence the model is not too complex for the dataset.
-However the bias it relatively high, indicating underfitting, i.e. my model suffers from low performance for unseen data, since the model is not complex enough to capture the patterns in the training data.
-In order to adress the problem of the high degree of bias, and hence find a nice bias-variance tradeoff I will try to tune the complexity of the model using regularization. 
-
-## Validation curves to assess over- and underfitting
-<img src="https://github.com/RasmusAU/RasmusAU-PHBS_MLF_2018/blob/master/data/Validation_curves.png" width="400">
-Validation curves vary the model parameters values instead of plotting training and test accuracies as functions. Also here I get a high bias.
-
 ## Models
 ### Logistic regression
 The first model is the simple Logistic regression. It generates a  multi-class model with linear weights, most directly comparable  to  the  feature  weights  given  by linear regression.
@@ -130,8 +113,25 @@ The Gini impurity is a criterion that minimizes the probability of misclassifica
 
 Gini accuracy = 0.4308
 
+## K-fold cross-validation
+K-fold cross-validation is used to randomly split the training dataset into k folds without replacement. The folds k — 1  are used for training the model, and last fold is used to evaluate performance. This is done k times to obtain k models and performance estimates:
+
+CV accuracy: 0.444 +/- 0.022
+
+## Learning curves to assess bias/variance problems 
+To improve performance, I look at learning and validation curves:
+
+<img src="https://github.com/RasmusAU/RasmusAU-PHBS_MLF_2018/blob/master/data/Learning_curves.png" width="400">
+Based on the learning curves above it is clear that the variance is low, given me no indication of overfitting the data. Hence the model is not too complex for the dataset.
+However the bias it relatively high, indicating underfitting, i.e. my model suffers from low performance for unseen data, since the model is not complex enough to capture the patterns in the training data.
+In order to adress the problem of the high degree of bias, and hence find a nice bias-variance tradeoff I will try to tune the complexity of the model using regularization. 
+
+## Validation curves to assess over- and underfitting
+<img src="https://github.com/RasmusAU/RasmusAU-PHBS_MLF_2018/blob/master/data/Validation_curves.png" width="400">
+Validation curves vary the model parameters values instead of plotting training and test accuracies as functions. Also here I get a high bias.
+
 ## Conclusion
-The most significant features were found to be the actors names, the name of the director, genre and the number of vritics for review.
+The most significant features were found to be the actors names, the name of the director, genre and the number of critics for review.
 The best model to represent the movie features is the Support Vector Machine using grid search.
 Not possible to estimate the IMDb ratings well based on the data available on IMDb. This may be caused by multiple factors e.g.:
 * Dataset from Kaggle is insufficient and/or not correct.
