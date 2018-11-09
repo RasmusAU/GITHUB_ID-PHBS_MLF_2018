@@ -125,6 +125,11 @@ The Gini impurity is a criterion that minimizes the probability of misclassifica
 
 Gini accuracy = 0.4308
 
+## K-fold cross-validation
+K-fold cross-validation is used to randomly split the training dataset into k folds without replacement. The folds k — 1  are used for training the model, and last fold is used to evaluate performance. This is done k times to obtain k models and performance estimates:
+
+CV accuracy: 0.444 +/- 0.022
+
 ## Conclusion
 The most significant features were found to be the actors names, the name of the director, genre and the number of vritics for review.
 The best model to represent the movie features is the Support Vector Machine using grid search.
