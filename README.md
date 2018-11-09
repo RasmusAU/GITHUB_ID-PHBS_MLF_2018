@@ -85,6 +85,11 @@ Number of features that meet the threshold criterion >= 0.07:
 |director_facebook_likes |0.0712 |
 |actor_1_facebook_likes |0.0704 |
 
+## K-fold cross-validation
+K-fold cross-validation is used to randomly split the training dataset into k folds without replacement. The folds k — 1  are used for training the model, and last fold is used to evaluate performance. This is done k times to obtain k models and performance estimates:
+
+CV accuracy: 0.444 +/- 0.022
+
 ## Learning curves to assess bias/variance problems 
 To improve performance, I look at learning and validation curves:
 
@@ -124,11 +129,6 @@ Entropy accuracy = 0.4480
 The Gini impurity is a criterion that minimizes the probability of misclassification:
 
 Gini accuracy = 0.4308
-
-## K-fold cross-validation
-K-fold cross-validation is used to randomly split the training dataset into k folds without replacement. The folds k — 1  are used for training the model, and last fold is used to evaluate performance. This is done k times to obtain k models and performance estimates:
-
-CV accuracy: 0.444 +/- 0.022
 
 ## Conclusion
 The most significant features were found to be the actors names, the name of the director, genre and the number of vritics for review.
