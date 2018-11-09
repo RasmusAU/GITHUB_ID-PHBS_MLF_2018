@@ -104,7 +104,7 @@ Validation curves vary the model parameters values instead of plotting training 
 ## K-fold cross-validation
 K-fold cross-validation is used to randomly split the training dataset into k folds without replacement. The folds k — 1  are used for training the model, and last fold is used to evaluate performance. This is done k times to obtain k models and performance estimates:
 
-CV accuracy: 0.444 +/- 0.022
+Cross-validation accuracy: 0.444 +/- 0.022
 
 ## Models
 ### Logistic regression
