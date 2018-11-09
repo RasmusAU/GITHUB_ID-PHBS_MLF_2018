@@ -7,7 +7,7 @@
 
 ## Goal of the project
 * Use the features of a movie, e.g. movie director, duration, genre, actors, budget etc., to predict the IMDb score.
-* The goal of this project is to identify the features needed to predict what makes a good movie, defined as ranking highly on the IMDb score, using various methods of machine learning, e.g. logistic regression, KNN, SVM, random forest, bagging and AdaBoosting, based on the book "Python Machine Learning" by Sebastian Raschka. 
+* The goal of this project is to identify the features needed to predict what makes a good movie, defined as ranking highly on the IMDb score, using various methods of machine learning, e.g. logistic regression, KNN, SVM and random forest, based on the book "Python Machine Learning" by Sebastian Raschka. 
 * Furthermore the project can show whether the gross earnings will exceed the budget of a movie, hence identifying whether the movie will be profitable or not, and hence if it should be realized or not.
 * From the best scoring algorithm one can identify the features to make a good scoring movie.
 
