@@ -112,13 +112,6 @@ The first model is the simple Logistic regression. It generates a  multi-class m
 
 Logistic regression = 0.4639
 
-### Support Vector Machine using grid search
-Optimization of the hyper-parameter  C  was  done using  grid  search. Grid  search is  exhaustive search through a manually specified subset of the hyper-parameter space. 
-
-SVM = 0.5122
-
-I see that using the exhaustive grid search, a popular hyperparameter optimization technique, improves the model's performance.
-
 ### K-nearest neighbor
 Using majority voting, the KNN model finds the nearest specified k samples in the training dataset and use majority voting of these samples to classify the new data point.
 
@@ -133,6 +126,13 @@ Entropy accuracy = 0.4480
 The Gini impurity is a criterion that minimizes the probability of misclassification:
 
 Gini accuracy = 0.4308
+
+### Support Vector Machine using grid search
+Optimization of the hyper-parameter  C  was  done using  grid  search. Grid  search is  exhaustive search through a manually specified subset of the hyper-parameter space. 
+
+SVM = 0.5122
+
+I see that using the exhaustive grid search, a popular hyperparameter optimization technique, improves the model's performance.
 
 ## Conclusion
 The most significant features were found to be the actors names, the name of the director, genre and the number of critics for review.
