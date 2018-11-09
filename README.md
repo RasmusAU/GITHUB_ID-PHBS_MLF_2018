@@ -87,6 +87,8 @@ Number of features that meet the threshold criterion >= 0.07:
 |director_facebook_likes |0.0712 |
 |actor_1_facebook_likes |0.0704 |
 
+Finding that mainly the actors and director's name is important as well as their Facebook like and the number of critics for reviews.
+
 ## Learning curves to assess bias/variance problems 
 To improve performance, I look at learning and validation curves:
 
