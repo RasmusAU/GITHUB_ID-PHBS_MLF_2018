@@ -71,6 +71,8 @@ Using SKLearn and test_size=0.4 the dataset is slit into a training dataset and 
 Data is standardized using SKLearn to get comparable features.
 
 ## Feature selection
+I use random forest to assess the feature importance:
+
 <img src="https://github.com/RasmusAU/RasmusAU-PHBS_MLF_2018/blob/master/data/Feature_importance_RF.png" width="400">
 Number of features that meet the threshold criterion >= 0.07:
 
