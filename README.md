@@ -50,9 +50,9 @@
 <img src="https://github.com/RasmusAU/RasmusAU-PHBS_MLF_2018/blob/master/data/Description.png" width="700">
 
 ## Data processing
-* Drop the meaningless columns
+* Drop irrelevant and not useful columns.
  * Dropping missing values for non-numeric columns that are not useful. E.g. director name, actors names.
-* Deal with the NAN in data
+* Deal with the NAN in data.
   * I use mean imputation to estimate the missing values for the features where it makes sense. Mean imputation is a common interpolation technique, where I replace the missing values (NAN) with the mean value of the entire feature column. This is done to minimize the loss of information, and an alternative instead of dropping observations.
   * E.g. If the year of the movie's release is missing, then I drop the observation, since it does not makes sense to estimate this year based on other movies.
 * I examine the IMDb scores of movies in the period 2000-2018, hence movies from earlier than 2000 have been dropped. This is done to account for changes in movie budgets, the entrence of the internet, and improvement of technology.
