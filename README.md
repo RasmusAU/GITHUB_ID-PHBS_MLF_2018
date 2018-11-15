@@ -58,7 +58,7 @@
 * I examine the IMDb scores of movies in the period 2000-2018, hence movies from earlier than 2000 have been dropped. This is done to account for changes in movie budgets, the entrence of the internet, and improvement of technology.
 
 ## Data after processing
-The mean of the 2041 included movies' IMDb's ratings in the period 2000-2018 is approximately 6.30 and with a standard deviation of approximately 0.99. The distribution looks as the following:
+The mean of the 2227 included movies' IMDb's ratings in the period 2000-2018 is approximately 6.29 and with a standard deviation of approximately 0.99. The distribution looks as the following:
 <img src="https://github.com/RasmusAU/RasmusAU-PHBS_MLF_2018/blob/master/data/distribution_imdb_score_done.png" width="400">
 
 The following is a correlation map showing the correlation between the different features:
