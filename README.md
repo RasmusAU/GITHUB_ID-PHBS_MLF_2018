@@ -65,7 +65,7 @@ The following is a correlation map showing the correlation between the different
 <img src="https://github.com/RasmusAU/RasmusAU-PHBS_MLF_2018/blob/master/data/correlation_map.png" width="700">
 
 ## Partitioning the dataset into training and test dataset
-Using SKLearn and test_size=0.4 the dataset is slit into a training dataset and a test dataset.
+Using SKLearn and test_size=0.35 the dataset is slit into a training dataset and a test dataset.
 
 ## Standardization of data
 Data is standardized using SKLearn to get comparable features.
@@ -74,7 +74,7 @@ Data is standardized using SKLearn to get comparable features.
 I use random forest to assess the feature importance:
 
 <img src="https://github.com/RasmusAU/RasmusAU-PHBS_MLF_2018/blob/master/data/Feature_importance_RF.png" width="400">
-Number of features that meet the threshold criterion >= 0.07:
+Number of features that meet the threshold criterion >= 0.08:
 
 |Feature |Importance |
 |:----- |:----- |
@@ -94,12 +94,14 @@ The figure above displays the explained variance, showing that the first princip
 To improve performance, I look at learning and validation curves:
 
 <img src="https://github.com/RasmusAU/RasmusAU-PHBS_MLF_2018/blob/master/data/Learning_curves.png" width="400">
+The number of training samples reach a stable level at around 900, hence accuracy does not increase significantly afterwards.
 Based on the learning curves above it is clear that the variance is low, given me no indication of overfitting the data. Hence the model is not too complex for the dataset.
 However the bias it relatively high, indicating underfitting, i.e. my model suffers from low performance for unseen data, since the model is not complex enough to capture the patterns in the training data.
 In order to adress the problem of the high degree of bias, and hence find a nice bias-variance tradeoff I will try to tune the complexity of the model using regularization. 
 
 ## Validation curves to assess over- and underfitting
 <img src="https://github.com/RasmusAU/RasmusAU-PHBS_MLF_2018/blob/master/data/Validation_curves.png" width="400">
+Based on the validation curves above, a good value is 1 for parameter C to reach a stable accuracy. Increasing C to e.g. 10 and 100 does not increase the accuracy significantly. 
 Validation curves vary the model parameters values instead of plotting training and test accuracies as functions. Also here I get a high bias.
 
 ## K-fold cross-validation
@@ -111,7 +113,7 @@ Cross-validation accuracy: 0.490 +/- 0.049
 ### Logistic regression
 The first model is the simple Logistic regression. It generates a  multi-class model with linear weights, most directly comparable  to  the  feature  weights  given  by linear regression.
 
-Logistic regression = 0.470
+Logistic regression = 0.479
 
 ### K-nearest neighbor
 Using majority voting, the KNN model finds the nearest specified k samples in the training dataset and use majority voting of these samples to classify the new data point.
@@ -135,10 +137,12 @@ SVM = 0.504
 
 I see that using the exhaustive grid search, a popular hyperparameter optimization technique, improves the model's performance.
 
+Cross-validation of SVM scores yield an accuracy of 0.486 +/- 0.039 providing proof of a stable model.
+
 ## Conclusion
 The most significant features were found to be the actors names, the name of the director, genre and the number of critics for review.
 The best model to represent the movie features is the Support Vector Machine using grid search.
-Not possible to estimate the IMDb ratings well based on the data available on IMDb. This may be caused by multiple factors e.g.:
+It is not possible to estimate the IMDb ratings well based on the data available on IMDb. This may be caused by multiple factors e.g.:
 * Dataset from Kaggle is insufficient and/or not correct.
 * Not complex enough features, as indicated by the learning curve, I have high bias.
 
