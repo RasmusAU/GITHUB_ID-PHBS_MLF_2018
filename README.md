@@ -78,16 +78,17 @@ Number of features that meet the threshold criterion >= 0.07:
 
 |Feature |Importance |
 |:----- |:----- |
-|actor_2_name |0.1355 |
-|director_name |0.0999 |
-|num_critic_for_reviews |0.0949 |
-|genres |0.0931 |
-|actor_1_name |0.0871 |
-|duration |0.0714 |
-|director_facebook_likes |0.0712 |
-|actor_1_facebook_likes |0.0704 |
+|actor_2_name |0.129690 |
+|director_name |0.096114 |
+|num_critic_for_reviews |0.092185 |
+|genres |0.090795 |
+|actor_1_name |0.089304 |
 
-Finding that mainly the actors and director's name is important as well as their Facebook like and the number of critics for reviews.
+Finding that mainly the actors and director's name is important as well as the genre and the number of critics for reviews. Here the top 5 is selected, but mainly the names and the actors/director's respective Facebook likes are rather important.
+
+## Total and explained variance
+<img src="https://github.com/RasmusAU/RasmusAU-PHBS_MLF_2018/blob/master/data/Explained_variance_PCA.png" width="400">
+The figure above displays the explained variance, showing that the first principal component accounts for about 35% of the explained variance ratio, i.e. that constains over one-third of the information (variance).
 
 ## Learning curves to assess bias/variance problems 
 To improve performance, I look at learning and validation curves:
@@ -104,33 +105,33 @@ Validation curves vary the model parameters values instead of plotting training 
 ## K-fold cross-validation
 K-fold cross-validation is used to randomly split the training dataset into k folds without replacement. The folds k — 1  are used for training the model, and last fold is used to evaluate performance. This is done k times to obtain k models and performance estimates:
 
-Cross-validation accuracy: 0.444 +/- 0.022
+Cross-validation accuracy: 0.490 +/- 0.049
 
 ## Models
 ### Logistic regression
 The first model is the simple Logistic regression. It generates a  multi-class model with linear weights, most directly comparable  to  the  feature  weights  given  by linear regression.
 
-Logistic regression = 0.4639
+Logistic regression = 0.470
 
 ### K-nearest neighbor
 Using majority voting, the KNN model finds the nearest specified k samples in the training dataset and use majority voting of these samples to classify the new data point.
 
-KNN = 0.4002 (K=20)
+KNN = 0.391 (K=100)
 
 ### Random forest
 I use decision trees for classification. Entropy is a measure of impurity to determine which feature split maximizes the
 Information Gain (IG).
 
-Entropy accuracy = 0.4480
+Entropy accuracy = 0.429
 
 The Gini impurity is a criterion that minimizes the probability of misclassification:
 
-Gini accuracy = 0.4308
+Gini accuracy = 0.460
 
 ### Support Vector Machine using grid search
 Optimization of the hyper-parameter  C  was  done using  grid  search. Grid  search is  exhaustive search through a manually specified subset of the hyper-parameter space. 
 
-SVM = 0.5122
+SVM = 0.504
 
 I see that using the exhaustive grid search, a popular hyperparameter optimization technique, improves the model's performance.
 
@@ -141,6 +142,8 @@ Not possible to estimate the IMDb ratings well based on the data available on IM
 * Dataset from Kaggle is insufficient and/or not correct.
 * Not complex enough features, as indicated by the learning curve, I have high bias.
 
+## Further research
+Instead of trying to classify the IMDb score exactly, which does not work that well, a regression-based approach could be used to estimate how far away the estimation would be from the true value, and hence trying to estimate whether the movie will be scoring e.g. low, medium or high on the IMDb scale
 Further research could include a sentiment analysis of the comments from IMDb, news and social medias impact (coverage of movie premiere).
 
 ## References:
