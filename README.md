@@ -139,15 +139,28 @@ I see that using the exhaustive grid search, a popular hyperparameter optimizati
 
 Cross-validation of SVM scores yield an accuracy of 0.486 +/- 0.039 providing proof of a stable model.
 
+### Checking for regression based solutions
+Instead of using classification to correctly guess the IMDb score, then I will check whether a regression based solution to see if this yield usefull results to predict the IMDb score. 
+I start by plotting pair-wise correlations to see how the data is distributed and if it contains outliers. Due to space limitations for the plot and what is interesting looking at, I have restricted the plot. This can be changed in the code to verify my method, and is done by deleting the first #-sign to obtain the line: sns.pairplot(df, size=2.5)
+<img src="https://github.com/RasmusAU/RasmusAU-PHBS_MLF_2018/blob/master/data/Pairplots.png" width="400">
+From the plot above I see that the distribution of the IMDb is hardly explainable using a regression based approach any of the parameters (both for the chosen in in plot and for all features in the dataset). 
+To look more closely at the pair-wise correlation, I plot a heatmap:
+<img src="https://github.com/RasmusAU/RasmusAU-PHBS_MLF_2018/blob/master/data/PairplotsHeatmap.png" width="400">
+From this heatmap it is clear that the IMDb scores are not correlated with any feature as much as wanted to use this for a regression.
+Instead I see that the features gross and budget are correlated with 0.71, and hence I will try to use budget to estimate the grossing of a movie.
+To do this I use a decision tree regression:
+<img src="https://github.com/RasmusAU/RasmusAU-PHBS_MLF_2018/blob/master/data/DecisionTreeRegressor.png" width="400">
+From the decision tree above, the regression clearly captures the trend of when budgets increase, the movies increase in the gross earnings, as expected.
+
 ## Conclusion
 The most significant features were found to be the actors names, the name of the director, genre and the number of critics for review.
 The best model to represent the movie features is the Support Vector Machine using grid search.
+Instead of trying to classify the IMDb score exactly, which does not work that well, a regression-based approach used to estimate how far away the estimation would be from the true value, and hence trying to estimate whether the movie will be scoring e.g. low, medium or high on the IMDb scale, is not a better predictor than the SVM model mentioned above.
 It is not possible to estimate the IMDb ratings well based on the data available on IMDb. This may be caused by multiple factors e.g.:
 * Dataset from Kaggle is insufficient and/or not correct.
 * Not complex enough features, as indicated by the learning curve, I have high bias.
 
 ## Further research
-Instead of trying to classify the IMDb score exactly, which does not work that well, a regression-based approach could be used to estimate how far away the estimation would be from the true value, and hence trying to estimate whether the movie will be scoring e.g. low, medium or high on the IMDb scale
 Further research could include a sentiment analysis of the comments from IMDb, news and social medias impact (coverage of movie premiere).
 
 ## References:
