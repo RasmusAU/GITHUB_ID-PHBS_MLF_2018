@@ -157,6 +157,7 @@ To do this I use a decision tree regression:
 <img src="https://github.com/RasmusAU/RasmusAU-PHBS_MLF_2018/blob/master/data/DecisionTreeRegressor.png" width="600">
 
 From the decision tree above, the regression clearly captures the trend of when budgets increase, the movies increase in the gross earnings, as expected.
+However further regressions displays R^2 values are not large enough for concluding that the model explains the data well.
 
 ## Conclusion
 The most significant features were found to be the actors names, the name of the director, genre and the number of critics for review.
