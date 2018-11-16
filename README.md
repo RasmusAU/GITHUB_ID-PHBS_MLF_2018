@@ -143,18 +143,18 @@ Cross-validation of SVM scores yield an accuracy of 0.486 +/- 0.039 providing pr
 Instead of using classification to correctly guess the IMDb score, then I will check whether a regression based solution to see if this yield usefull results to predict the IMDb score. 
 I start by plotting pair-wise correlations to see how the data is distributed and if it contains outliers. Due to space limitations for the plot and what is interesting looking at, I have restricted the plot. This can be changed in the code to verify my method, and is done by deleting the first #-sign to obtain the line: sns.pairplot(df, size=2.5)
 
-<img src="https://github.com/RasmusAU/RasmusAU-PHBS_MLF_2018/blob/master/data/Pairplots.png" width="400">
+<img src="https://github.com/RasmusAU/RasmusAU-PHBS_MLF_2018/blob/master/data/Pairplots.png" width="600">
 
 From the plot above I see that the distribution of the IMDb is hardly explainable using a regression based approach any of the parameters (both for the chosen in in plot and for all features in the dataset). 
 To look more closely at the pair-wise correlation, I plot a heatmap:
 
-<img src="https://github.com/RasmusAU/RasmusAU-PHBS_MLF_2018/blob/master/data/PairplotsHeatmap.png" width="400">
+<img src="https://github.com/RasmusAU/RasmusAU-PHBS_MLF_2018/blob/master/data/PairplotsHeatmap.png" width="600">
 
 From this heatmap it is clear that the IMDb scores are not correlated with any feature as much as wanted to use this for a regression.
 Instead I see that the features gross and budget are correlated with 0.71, and hence I will try to use budget to estimate the grossing of a movie.
 To do this I use a decision tree regression:
 
-<img src="https://github.com/RasmusAU/RasmusAU-PHBS_MLF_2018/blob/master/data/DecisionTreeRegressor.png" width="400">
+<img src="https://github.com/RasmusAU/RasmusAU-PHBS_MLF_2018/blob/master/data/DecisionTreeRegressor.png" width="600">
 
 From the decision tree above, the regression clearly captures the trend of when budgets increase, the movies increase in the gross earnings, as expected.
 
